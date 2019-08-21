@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>PRACTICAL 1 OF JQUERY</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		p{			
+			padding: 10px;
+			font: 20px;
+			background-color:khaki;
+		}
+		#div1{			
+			padding: 10px;
+			font: 20px;
+			background-color:khaki;
+		}
+	</style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("p").mouseover(function(){
+					$(this).slideUp();
+			});
+
+				$("#div1").dblclick(function(){
+					$(this).fadeOut();
+			});
+				$("button").click(function(){
+					$("#div2").fadeIn();
+   			    	$("#div3").fadeIn("SLOW");
+   					$("#div4").fadeIn();
+				})
+				$("#button1").click(function(){
+					$("#div2").fadeOut();
+   			    	$("#div3").fadeOut("SLOW");
+   					$("#div4").fadeOut();
+				})
+
+			});
+
+
+</script>
+</head>
+<body>
+<p>mouseover and i will slide up </p>
+<div id="div1">gayabbbbbbbb</div>
+
+<button>Click to fade in boxes</button><br><br>
+<button id="button1">Click to fade out boxes</button><br><br>
+
+<div id="div2" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div4" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</body>
+</html>
